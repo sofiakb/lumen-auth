@@ -54,7 +54,7 @@ class LoginService extends AuthService
                     'content' => $token,
                     'expires' => $expires,
                 ],
-            ])->toArray()
+            ])->toJson()
         ]);
         Log::info("Token généré pour {$user->email}");
         return $token;
