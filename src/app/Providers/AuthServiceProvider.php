@@ -31,7 +31,7 @@ class AuthServiceProvider extends ServiceProvider
     {
         config(['logging.channels.auth' => [
             'driver' => 'daily',
-            'path'   => env('LOG_PATH', storage_path('logs' . DIRECTORY_SEPARATOR . 'auth')) . DIRECTORY_SEPARATOR . 'auth.log',
+            'path'   => env('LOG_PATH', storage_path('logs')) . DIRECTORY_SEPARATOR . 'auth' . DIRECTORY_SEPARATOR . 'auth.log',
             'level'  => 'debug',
         ]]);
     }
