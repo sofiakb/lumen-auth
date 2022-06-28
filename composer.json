@@ -1,41 +1,41 @@
 {
-  "name"             : "sofiakb/lumen-auth",
-  "description"      : "A library with simple JWT authentication.",
-  "type"             : "library",
-  "license"          : "MIT",
-  "autoload"         : {
-    "psr-4"   : {
-      "Sofiakb\\Lumen\\Auth\\": "src/app/",
-      "Sofiakb\\Tools\\"      : "tools/"
+    "name": "sofiakb/lumen-auth",
+    "description": "A library with simple JWT authentication.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Sofiakb\\Lumen\\Auth\\": "src/app/",
+            "Sofiakb\\Tools\\": "tools/"
+        },
+        "classmap": [
+            "tests/"
+        ]
     },
-    "classmap": [
-      "tests/"
-    ]
-  },
-  "authors"          : [
-    {
-      "name"    : "Sofiakb",
-      "email"   : "contact.sofiakb@gmail.com",
-      "homepage": "https://sofianeakbly.fr",
-      "role"    : "Developer"
+    "authors": [
+        {
+            "name": "Sofiakb",
+            "email": "contact.sofiakb@gmail.com",
+            "homepage": "https://sofianeakbly.fr",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "contact.sofiakb@gmail.com"
+    },
+    "minimum-stability": "stable",
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "require-dev": {
+        "laravel/lumen-framework": "^8.2",
+        "phpunit/phpunit": "^9.5"
+    },
+    "version": "v0.0.5",
+    "time": "2022-06-28",
+    "require": {
+        "tymon/jwt-auth": "dev-develop",
+        "ext-json": "*"
     }
-  ],
-  "support"          : {
-    "email": "contact.sofiakb@gmail.com"
-  },
-  "minimum-stability": "stable",
-  "config"           : {
-    "sort-packages"      : true,
-    "optimize-autoloader": true
-  },
-  "require-dev"      : {
-    "laravel/lumen-framework": "^8.2",
-    "phpunit/phpunit"        : "^9.5"
-  },
-  "version"          : "v0.0.4",
-  "time"             : "2021-10-11",
-  "require"          : {
-    "tymon/jwt-auth"   : "dev-develop",
-    "ext-json"         : "*"
-  }
 }
