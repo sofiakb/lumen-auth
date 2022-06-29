@@ -32,8 +32,8 @@
         "laravel/lumen-framework": "^8.2",
         "phpunit/phpunit": "^9.5"
     },
-    "version": "v0.0.5",
-    "time": "2022-06-28",
+    "version": "v0.0.6",
+    "time": "2022-06-29",
     "require": {
         "tymon/jwt-auth": "dev-develop",
         "ext-json": "*"
