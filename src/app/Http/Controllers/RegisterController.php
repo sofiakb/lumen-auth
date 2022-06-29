@@ -12,6 +12,7 @@
 
 namespace Sofiakb\Lumen\Auth\Http\Controllers;
 
+use Sofiakb\Lumen\Auth\Services\AuthService;
 use Sofiakb\Lumen\Auth\Services\RegisterService;
 use Sofiakb\Tools\Helpers;
 use Sofiakb\Tools\Log\Log;
@@ -57,7 +58,8 @@ class RegisterController extends Controller
             return Response::error(400);
         
         Log::info("Vérification d'un erreur potentielle");
-        if (!($user instanceof $this->service->getClasses()->user))
+        $userClass = AuthService::userClass();
+        if (!($user instanceof $userClass))
             return Response::unknown($user);
         
         Log::info($data->email . " a bien créé son compte");

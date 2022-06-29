@@ -41,7 +41,7 @@ class RegisterService extends AuthService
                 $data->$key = mb_strtolower($value);
         
         return $this->loadUserByUsername($data->username) === null && $this->loadUserByEmail($data->email) === null
-            ? $this->getClasses()->user::create(Helpers::toArray($data))
+            ? self::userClass()::create(Helpers::toArray($data))
             : Result::duplicate("Un compte existe déjà avec cette adresse mail ou ce nom d'utilisateur");
     }
     
